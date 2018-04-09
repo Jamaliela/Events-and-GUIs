@@ -21,13 +21,30 @@
 
 import turtle
 
-# The next four functions are our "event handlers".
+class DrivenTurtle:
 
-class Handling:
+    def __init__(self):
+        self.turt = turtle.Turtle()    # Create our favorite turtle
+        self.wn = turtle.Screen()      # Get a reference to the window
 
-    def __init__(self, turt, wn):
-        self.turt = turt
-        self.wn = wn
+        self.wn.setup(400, 500)  # Determine the window size
+        self.wn.title("Handling keypresses!")  # Change the window title
+        self.wn.bgcolor("lightgreen")  # Set the background color
+
+        # These lines "wire up" keypresses to the handlers we've defined.
+
+        self.wn.onkey(self.h1, "Up")
+        self.wn.onkey(self.h2, "Left")
+        self.wn.onkey(self.h3, "Right")
+        self.wn.onkey(self.h4, "q")
+
+        # Now we need to tell the window to start listening for events,
+        # If any of the keys that we're monitoring is pressed, its
+        # handler will be called.
+        self.wn.listen()
+
+        self.wn.mainloop()
+
 
     def h1(self):
         self.turt.forward(30)
@@ -43,30 +60,8 @@ class Handling:
 
 
 def main():
-    global wn
-    global tess
 
-    wn = turtle.Screen()                 # Get a reference to the window
-    wn.setup(400,500)                    # Determine the window size
-    wn.title("Handling keypresses!")     # Change the window title
-    wn.bgcolor("lightgreen")             # Set the background color
-
-    tess = turtle.Turtle()               # Create our favorite turtle
-
-    # These lines "wire up" keypresses to the handlers we've defined.
-    handler = Handling(tess, wn)
-
-    wn.onkey(handler.h1, "Up")
-    wn.onkey(handler.h2, "Left")
-    wn.onkey(handler.h3, "Right")
-    wn.onkey(handler.h4, "q")
-
-    # Now we need to tell the window to start listening for events,
-    # If any of the keys that we're monitoring is pressed, its
-    # handler will be called.
-    wn.listen()
-
-    wn.mainloop()
+    h = DrivenTurtle()  # Make an instance of the class DrivenTurtle
 
 
 main()
