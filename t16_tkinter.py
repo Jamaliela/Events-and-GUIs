@@ -2,14 +2,14 @@
 # Author: Dr. Scott Heggen      TODO: Change this to your name
 # Username: heggens             TODO: Change this to your username
 #
-# T17: Tkinter tinkering
+# T16: Events and GUIs
 #
-#Purpose: To explore the Tkinter module for making a GUI
+# Purpose: To explore the Tkinter module for making a GUI
 #
-# a GUI widget is a graphical component such as a button, text label as shown below.
+# A GUI widget is a graphical component such as a button, text label as shown below.
 # GUI widgets also exist to make drop-down menus and scroll bars, display images, etc...
 # Tkinter gives you the ability to create GUI Windows containing widgets.
-# This program is a simple exploration
+# This program is a simple exploration.
 #######################################################################
 # Acknowledgements:
 #

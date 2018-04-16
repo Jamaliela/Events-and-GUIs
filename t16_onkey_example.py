@@ -21,15 +21,19 @@
 
 import turtle
 
+
 # The next four functions are our "event handlers".
 def h1():
-   tess.forward(30)
+    tess.forward(30)
+
 
 def h2():
-   tess.left(45)
+    tess.left(45)
+
 
 def h3():
-   tess.right(45)
+    tess.right(45)
+
 
 def h4():
     wn.bye()                        # Close down the turtle window
@@ -58,5 +62,6 @@ def main():
     wn.listen()
 
     wn.mainloop()
+
 
 main()

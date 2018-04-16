@@ -21,6 +21,7 @@
 
 import turtle
 
+
 class DrivenTurtle:
 
     def __init__(self):
@@ -32,7 +33,6 @@ class DrivenTurtle:
         self.wn.bgcolor("lightgreen")  # Set the background color
 
         # These lines "wire up" keypresses to the handlers we've defined.
-
         self.wn.onkey(self.h1, "Up")
         self.wn.onkey(self.h2, "Left")
         self.wn.onkey(self.h3, "Right")
@@ -44,7 +44,6 @@ class DrivenTurtle:
         self.wn.listen()
 
         self.wn.mainloop()
-
 
     def h1(self):
         self.turt.forward(30)
