@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your name
-# Username: heggens             TODO: Change this to your username
+# Author: Scott Heggen & Emily Lovell     TODO: Change this to your name
+# Username: heggens & lovelle            TODO: Change this to your username
 #
 # T16: Events and GUIs
 #
@@ -8,7 +8,8 @@
 # ######################################################################
 # Acknowledgements:
 #
-#   This code is adapted from http://openbookproject.net/thinkcs/python/english3e/events.html#mouse-events
+#   This code is adapted from:
+#   http://openbookproject.net/thinkcs/python/english3e/events.html#mouse-events
 #   by Dr. Mario Nakazawa
 #
 # licensed under a Creative Commons

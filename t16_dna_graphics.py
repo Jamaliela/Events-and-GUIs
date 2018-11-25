@@ -1,10 +1,10 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your name
-# Username: heggens             TODO: Change this to your username
+# Author: Scott Heggen & Emily Lovell     TODO: Change this to your name
+# Username: heggens & lovelle             TODO: Change this to your username
 #
-# T16: Events
+# T15: Events and GUIs
 #
-# Purpose: show interactive DNA strand copying using the turtle library.
+# Purpose: Show interactive DNA strand copying using the turtle library.
 #  This program also uses both mouse click and keypress event handling.
 #  The mouse click causes the complementary nucleotides to appear under
 #  the base that the user clicks on in the DNA strand.
@@ -23,42 +23,45 @@ import random
 # Global variables which will be used throughout the program.
 global nucleotides
 nucleotides = {"A": "pink", "T": "green", "C": "magenta", "G": "yellow"}
+
 global complement
 complement = {"T": "A", "A": "T", "G": "C", "C": "G"}
+
 global max_bases                # We'll be using this variable inside an event handler, so it needs global scope
 max_bases = 4
 
 
 def draw_scaffold():
     """
-    Create the top and bottom scaffold for the nucleotides to be added
-    afterwards.
+    Create the top and bottom scaffold for the nucleotides
+    to be added afterwards.
 
     :return: None
     """
-    DNA_protein = turtle.Turtle()
-    DNA_protein.hideturtle()
-    DNA_protein.shape("square")
-    DNA_protein.penup()
-    DNA_protein.setpos(-260,230)
-    DNA_protein.pendown()
-    DNA_protein.pensize(20)
-    DNA_protein.forward(500)
 
-    DNA_protein.penup()
-    DNA_protein.setpos(-260,-42)
-    DNA_protein.pendown()
-    DNA_protein.pensize(20)
-    DNA_protein.forward(500)
+    dna_protein = turtle.Turtle()
+    dna_protein.hideturtle()
+    dna_protein.shape("square")
+    dna_protein.penup()
+    dna_protein.setpos(-260,230)
+    dna_protein.pendown()
+    dna_protein.pensize(20)
+    dna_protein.forward(500)
 
-    DNA_protein.penup()
-    DNA_protein.setpos(0,-170)
-    DNA_protein.write("Click on the black square for each nucleotide \nin the DNA strand created at the top\nto get the complement in the strand at the bottom!\n\nPress 'q' to quit.", move=False,align='center',font=("Arial",15,("bold","normal")))
+    dna_protein.penup()
+    dna_protein.setpos(-260,-42)
+    dna_protein.pendown()
+    dna_protein.pensize(20)
+    dna_protein.forward(500)
+
+    dna_protein.penup()
+    dna_protein.setpos(0,-170)
+    dna_protein.write("Click on the black square for each nucleotide \nin the DNA strand created at the top\nto get the complement in the strand at the bottom!\n\nPress 'q' to quit.", move=False,align='center',font=("Arial",15,("bold","normal")))
 
 
 def draw_random_DNA(current_base_turtle, base_index, letter):
     """
-    Draw a random sequence to be used later to create he complementary base pair
+    Draw a random sequence to be used later to create the complementary base pair
 
     :param current_base_turtle: a turtle object
     :param base_index: an index, to help position the turtle
@@ -67,7 +70,7 @@ def draw_random_DNA(current_base_turtle, base_index, letter):
     """
     current_base_turtle.penup()
     current_base_turtle.right(90)
-    current_base_turtle.setpos(-250 + 95*base_index, 230)
+    current_base_turtle.setpos(-250 + 95*base_index, 230)       # Moves the turtle right the appropriate amount
     current_base_turtle.pendown()
     current_base_turtle.shape("square")
     current_base_turtle.pensize(10)
@@ -87,7 +90,7 @@ def draw_random_DNA(current_base_turtle, base_index, letter):
 
 def draw_complement(letter, x, y):
         """
-        Draws the complement strand for a given letter at the correct location
+        Draws the complement strand for a given letter at the correct location.
 
         :param letter: the base letter
         :param x: the mouse x-coordinate
@@ -135,6 +138,7 @@ def base_handler(x, y):
     """
     global current_letter
     global current_base
+
     draw_complement(current_letter, x, y)           # Draw the complement strand
     current_base += 1
     if current_base <= max_bases:
@@ -148,6 +152,7 @@ def base_handler(x, y):
 def main():
     """
     Interactive DNA sequence drawing program.
+
     :return: None
     """
     global letter_turtle            # We'll be using this variable inside an event handler, so it needs global scope
@@ -172,6 +177,7 @@ def main():
     def quit_program():
         """
         Event handler for quitting the program
+
         :return: None
         """
         wn.bye()

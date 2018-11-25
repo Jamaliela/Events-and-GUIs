@@ -1,8 +1,8 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your name
-# Username: heggens             TODO: Change this to your username
+# Author: Scott Heggen & Emily Lovell     TODO: Change this to your name
+# Username: heggens & lovelle            TODO: Change this to your username
 #
-# T16: Events
+# T15: Events and GUIs
 #
 # Purpose: To demonstrate how turtle object responds to key press events.
 #   the up arrow would move the turtle forward
@@ -42,7 +42,6 @@ class DrivenTurtle:
         # If any of the keys that we're monitoring is pressed, its
         # handler will be called.
         self.wn.listen()
-
         self.wn.mainloop()
 
     def h1(self):

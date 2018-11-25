@@ -1,8 +1,8 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your name
-# Username: heggens             TODO: Change this to your username
+# Author: Scott Heggen & Emily Lovell     TODO: Change this to your name
+# Username: heggens & lovelle            TODO: Change this to your username
 #
-# T16: Events
+# T15: Events and GUIs
 #
 # Purpose: To demonstrate how turtle object responds to key press events.
 #   the up arrow would move the turtle forward
@@ -12,7 +12,8 @@
 # ######################################################################
 # Acknowledgements:
 #
-#   This code is adapted from http://openbookproject.net/thinkcs/python/english3e/events.html#mouse-events
+#   This code is adapted from:
+#   http://openbookproject.net/thinkcs/python/english3e/events.html#mouse-events
 #   by Dr. Mario Nakazawa
 #
 # licensed under a Creative Commons

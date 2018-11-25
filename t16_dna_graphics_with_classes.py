@@ -1,10 +1,10 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your name
-# Username: heggens             TODO: Change this to your username
+# Author: Scott Heggen & Emily Lovell     TODO: Change this to your name
+# Username: heggens & lovelle            TODO: Change this to your username
 #
-# T16: Events
+# T15: Events and GUIs
 #
-# Purpose: show interactive DNA strand copying using the turtle library.
+# Purpose: Show interactive DNA strand copying using the turtle library.
 #  This program also uses both mouse click and keypress event handling.
 #  The mouse click causes the complementary nucleotides to appear under
 #  the base that the user clicks on in the DNA strand.
@@ -44,8 +44,8 @@ class DNADraw:
 
         self.wn = turtle.Screen()
         self.wn.onkey(self.quit_program, "q")     # Binds to the quit_program event handler above
-        self.wn.listen()                     # Needed to capture events
-        self.wn.mainloop()                   # Keeps the program running
+        self.wn.listen()                          # Needed to capture events
+        self.wn.mainloop()                        # Keeps the program running
 
     def quit_program(self):
             """
@@ -63,24 +63,24 @@ class DNADraw:
         :return: None
         """
 
-        DNA_protein = turtle.Turtle()
-        DNA_protein.hideturtle()
-        DNA_protein.shape("square")
-        DNA_protein.penup()
-        DNA_protein.setpos(-260,230)
-        DNA_protein.pendown()
-        DNA_protein.pensize(20)
-        DNA_protein.forward(500)
+        dna_protein = turtle.Turtle()
+        dna_protein.hideturtle()
+        dna_protein.shape("square")
+        dna_protein.penup()
+        dna_protein.setpos(-260,230)
+        dna_protein.pendown()
+        dna_protein.pensize(20)
+        dna_protein.forward(500)
     
-        DNA_protein.penup()
-        DNA_protein.setpos(-260,-42)
-        DNA_protein.pendown()
-        DNA_protein.pensize(20)
-        DNA_protein.forward(500)
+        dna_protein.penup()
+        dna_protein.setpos(-260,-42)
+        dna_protein.pendown()
+        dna_protein.pensize(20)
+        dna_protein.forward(500)
     
-        DNA_protein.penup()
-        DNA_protein.setpos(0,-170)
-        DNA_protein.write("Click on the black square for each nucleotide \nin the DNA strand created at the top\nto get the complement in the strand at the bottom!\n\nPress 'q' to quit.", move=False,align='center',font=("Arial",15,("bold","normal")))
+        dna_protein.penup()
+        dna_protein.setpos(0,-170)
+        dna_protein.write("Click on the black square for each nucleotide \nin the DNA strand created at the top\nto get the complement in the strand at the bottom!\n\nPress 'q' to quit.", move=False,align='center',font=("Arial",15,("bold","normal")))
 
     def draw_random_DNA(self):
         """
@@ -142,8 +142,7 @@ class DNADraw:
             pair_turtle.back(70)
             pair_turtle.showturtle()
             pair_turtle.color("black")
-    
-    
+
     def base_handler(self, x, y):
         """
         Event handler for clicks on turtles.
@@ -172,7 +171,8 @@ def main():
     :return: None
     """
 
-    dna = DNADraw()
+    dna = DNADraw()     # Yup. that's it!
+    # DNADraw()           # Technically, this would work also. Why?
 
 
 main()
