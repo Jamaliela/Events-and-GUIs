@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Scott Heggen & Emily Lovell     TODO: Change this to your name
-# Username: heggens & lovelle            TODO: Change this to your username
+# Author: Scott Heggen & Emily Lovell     TODO: Ela Jamali & Emely Alfaro
+# Username: heggens & lovelle             TODO: Jamalie & Alfarozaalae
 #
 # T15: Events and GUIs
 #
