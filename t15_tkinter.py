@@ -2,7 +2,7 @@
 # Author: Scott Heggen & Emily Lovell     TODO: Change this to your name
 # Username: heggens & lovelle            TODO: Change this to your username
 #
-# T16: Events and GUIs
+# T15: Events and GUIs
 #
 # Purpose: To explore the Tkinter module for making a GUI
 #
